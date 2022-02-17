@@ -1,0 +1,7 @@
+<a class="c-button c-button--{{ .type | urlize }} c-button--{{ .width | urlize }}"
+   href="{{ .link_url }}"
+   {{ if .open_in_new_tab }}
+        target="_blank"
+    {{ end }}>
+    {{ .label }}
+</a>

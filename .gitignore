@@ -1,0 +1,13 @@
+_site
+.sass-cache
+vendor
+_vendor
+public
+node_modules
+bookshop-live.js
+bookshop-hosted.js
+*.wasm
+bookshop.css
+_gen
+.hugo_build.lock
+.DS_Store

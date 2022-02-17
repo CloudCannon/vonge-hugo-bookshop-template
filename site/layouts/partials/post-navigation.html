@@ -1,0 +1,29 @@
+{{ if or .NextInSection .PrevInSection }}
+<div class="post__navigation animate">
+
+  {{ if .PrevInSection }}
+  <a class="post__prev" href="{{ .PrevInSection.Permalink }}">
+    <div class="prev__image">
+      <img loading="lazy" src="{{ .PrevInSection.Params.Image }}" alt="{{ .PrevInSection.Title }}">
+    </div>
+    <div class="prev__box">
+      <span class="post__nav post__nav__prev">Prev post</span>
+      <h2 class="post__nav__title">{{ .PrevInSection.Title }}</h2>
+    </div>
+  </a>
+  {{ end }}
+
+  {{ if .NextInSection }}
+  <a class="post__next" href="{{ .NextInSection.Permalink }}">
+    <div class="next__box">
+      <span class="post__nav post__nav__next">Next post</span>
+      <h2 class="post__nav__title">{{ .NextInSection.Title }}</h2>
+    </div>
+    <div class="next__image">
+      <img loading="lazy" src="{{ .NextInSection.Params.Image }}" alt="{{ .NextInSection.Title }}">
+    </div>
+  </a>
+  {{ end }}
+
+</div>
+{{ end }}

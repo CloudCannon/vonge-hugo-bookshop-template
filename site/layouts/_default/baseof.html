@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {{ partial "head.html" . }}
+
+<body>
+  {{ partial "header.html" . }}
+
+  <!-- Loop through any structures in the front-matter and render them -->
+  {{ partial "bookshop_bindings" `.Params.content_blocks` }}
+  {{ partial "bookshop_partial" (slice "page" .Params.content_blocks) }}
+  <!-- Render any additional page content below the page's content blocks -->
+  {{ block "main" . }}{{ end }}
+
+  <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
+
+  {{ partial "footer.html" . }}
+
+  {{ $script := resources.Get "js/scripts.js" }}
+  {{ $commonJs := resources.Get "js/common.js" }}
+
+  {{ if .Site.IsServer }}
+  <script src="{{ $script.Permalink }}"></script>
+  <script src="{{ $commonJs.Permalink }}"></script>
+  {{ else }}
+  <script src="{{ ($script | minify | fingerprint).RelPermalink }}"></script>
+  <script src="{{ ($commonJs | minify | fingerprint).RelPermalink }}"></script>
+  {{ end }}
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+{{ $c := "c-testimonial-card" }}
+<div class="{{$c}}">
+  <div class="{{$c}}__content">
+    <div class="{{$c}}__client-meta">
+      {{ if .image }}
+        <div class="{{$c}}__image-container">
+          <img class="{{$c}}__client-avatar" src="{{ .image }}" alt="{{ .name }}">
+        </div>
+      {{ end }}
+      <div class="{{$c}}__client-info">
+        {{ if .name }}
+          <h3 class="{{$c}}__client-name">{{ .name }}</h3>
+        {{ end }}
+        {{ if .position }}
+          <p class="{{$c}}__client-position">{{ .position }}</p>
+        {{ end }}
+      </div>
+    </div>
+    {{ if .blurb }}
+      <p class="{{$c}}__client-text">{{ .blurb }}</p>
+    {{ end }}
+  </div>
+</div>

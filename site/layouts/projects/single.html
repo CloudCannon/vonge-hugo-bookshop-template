@@ -1,0 +1,35 @@
+{{ define "main" }}
+
+{{ if (eq .Section "projects") }}
+
+<div class="container">
+
+  {{ partial "bookshop" (slice "page-heading" (dict "title" .Params.title "description" .Params.subtitle)) }}
+
+  {{ partial "bookshop" (slice "page-image" (dict "image" .Params.image "image_alt" .Params.title)) }}
+
+  <div class="page animate">
+    {{ .Content }}
+  </div>
+
+  {{ if .PrevInSection }}
+  <div class="project__navigation">
+    <a class="project__prev" href="{{ .PrevInSection.Permalink }}">
+      <div class="project__box">
+        <span class="project__nav__info">Next Project</span>
+        <h2 class="project__nav__title">{{ .PrevInSection.Title }}<i
+            class="ion ion-md-arrow-round-forward arrow-right"></i></h2>
+      </div>
+    </a>
+  </div>
+  {{ end }}
+
+</div>
+
+{{ partial "bookshop" (slice "newsletter" (dict "newsletter_title" site.Data.newsletter.newsletter_title
+"newsletter_description" site.Data.newsletter.newsletter_description "newsletter_identifier"
+site.Data.newsletter.newsletter_identifier "newsletter_button" site.Data.newsletter.newsletter_button)) }}
+
+{{ end }}
+
+{{ end }}

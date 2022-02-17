@@ -1,0 +1,11 @@
+{{ if .show_projects }}
+<div class="container animate">
+  <div class="row">
+    {{ range where site.RegularPages "Section" "projects" }}
+    {{ partial "bookshop" (slice "project-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title
+    "subtitle" .Params.subtitle)) }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+

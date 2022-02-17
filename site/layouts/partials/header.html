@@ -1,0 +1,66 @@
+<!-- begin header -->
+<header class="c-header">
+  <div class="container">
+    <div class="row">
+      <div class="c-header__inner">
+
+        <div class="logo">
+          <a class="logo__link" href="{{ .Site.BaseURL }}">
+          {{ if .Site.Data.general_settings.logo_image }}
+            <img class="logo__image" src="{{ .Site.BaseURL }}{{ .Site.Data.general_settings.logo_image }}" alt="{{ .Site.Data.general_settings.title }}">
+          {{ else }}
+            {{ .Site.Data.general_settings.title }}
+          {{ end }}
+          </a>
+        </div>
+
+        <nav class="main-nav">
+          <div class="main-nav__box">
+
+            <div class="nav__icon-close">
+              <i class="ion ion-md-close"></i>
+            </div>
+
+            <div class="nav__title">Menu</div>
+
+            <ul class="nav__list list-reset">
+              {{ $currentPage := . }}
+              {{ range site.Data.navigation.menu__settings.menu__items }}
+              {{ $menuURL := .url | absLangURL }}
+              {{ $pageURL:= $currentPage.Permalink | absLangURL }}
+              {{ $active := eq $menuURL $pageURL }}
+
+              {{ if .HasChildren }}
+              <li class="nav__item dropdown">
+                <span class="nav__link dropdown-toggle">{{ .title }} <i class="ion ion-ios-arrow-down arrow-down"></i></span>
+                <div class="dropdown-menu">
+                  {{ range .submenu }}
+                  {{ $childURL := .url | absLangURL }}
+                  {{ $active := eq $childURL $pageURL }}
+                  <a href="{{ .url }}" class="nav__link {{ if $active }}active-link{{ end }}">{{ .title }}</a>
+                  {{ end }}
+                </div>
+              </li>
+
+              {{ else }}
+
+              <li class="nav__item">
+                <a href="{{ .url }}" class="nav__link {{ if $active }}active-link{{ end }}">{{ .title }}</a>
+              </li>
+              {{ end }}
+
+              {{ end }}
+            </ul>
+          </div>
+        {{ partial "social-link" . }}
+        </nav>
+
+        <div class="nav-button">
+          <i class="nav__icon nav__icon-menu ion ion-md-menu"></i>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</header>
+<!-- end header -->

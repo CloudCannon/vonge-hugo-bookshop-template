@@ -1,0 +1,75 @@
+{{ define "main" }}
+
+{{ if or (eq .Section "post") (eq .Section "posts") }}
+
+<div class="post-top">
+  <div class="container">
+    <div class="row">
+
+      {{ if .Params.image }}
+      <div class="col col-6 col-d-12">
+        <div class="post-image">
+          <img loading="lazy" src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
+        </div>
+      </div>
+      {{ end }}
+
+      <div class="col col-6 col-d-12">
+        <div class="post__info">
+
+          <div class="post-tags">
+            {{ range ($.GetTerms "tags") }}
+              <a href="{{ .Permalink }}" class="post-tags__tag">{{ .LinkTitle }}</a>
+            {{ end }}
+          </div>
+
+
+          <h1 class="post__title">{{ .Title }}</h1>
+
+          <div class="post__meta">
+            <div class="post__author-image">
+              <img loading="lazy" src="{{ site.Data.author.author_image }}" alt="{{ site.Data.author.author_name }}">
+            </div>
+
+            <div class="post__meta-bottom">
+              <div class="post__author">{{ site.Data.author.author_name }}</div>
+              <time class="post__date" datetime="{{ .Date.Format " 2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "02 Jan 2006" }}</time>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- begin post -->
+<div class="container animate">
+
+  <article class="post">
+
+    <div class="post__content">
+      {{ .Content }}
+    </div>
+
+    {{ partial "share.html" . }}
+
+  </article>
+</div>
+<!-- end post -->
+
+<div class="container">
+  <div class="row">
+    <div class="col col-10 col-d-12 push-d-0 push-1">
+      {{ partial "post-navigation.html" . }}
+    </div>
+  </div>
+</div>
+
+{{ partial "related-posts.html" . }}
+
+{{ partial "bookshop" (slice "newsletter" (dict "newsletter_title" site.Data.newsletter.newsletter_title "newsletter_description" site.Data.newsletter.newsletter_description "newsletter_identifier" site.Data.newsletter.newsletter_identifier "newsletter_button" site.Data.newsletter.newsletter_button)) }}
+
+{{ end }}
+
+{{ end }}

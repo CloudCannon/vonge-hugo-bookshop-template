@@ -1,0 +1,9 @@
+{{ $c := "c-page-heading" }}
+<div class="container">
+  <div class="{{$c}}">
+    <h1 class="{{$c}}__title">{{ humanize .title }}</h1>
+    {{ if .description }}
+      <p class="{{$c}}__description">{{ .description }}</p>
+    {{ end }}
+  </div>
+</div>
