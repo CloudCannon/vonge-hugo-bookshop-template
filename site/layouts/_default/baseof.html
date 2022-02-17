@@ -4,6 +4,11 @@
   {{ partial "head.html" . }}
 
 <body>
+
+  {{ if .Site.Data.general_settings.google_analytics }}
+    {{ partial "google-analytics.html" . }}
+  {{ end }}
+
   {{ partial "header.html" . }}
 
   <!-- Loop through any structures in the front-matter and render them -->
