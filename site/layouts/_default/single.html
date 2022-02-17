@@ -68,6 +68,10 @@
 
 {{ partial "related-posts.html" . }}
 
+{{ if .Site.Data.general_settings.disqus_identifier }}
+  {{ partial "disqus-comments.html" . }}
+{{ end }}
+
 {{ partial "bookshop" (slice "newsletter" (dict "newsletter_title" site.Data.newsletter.newsletter_title "newsletter_description" site.Data.newsletter.newsletter_description "newsletter_identifier" site.Data.newsletter.newsletter_identifier "newsletter_button" site.Data.newsletter.newsletter_button)) }}
 
 {{ end }}
