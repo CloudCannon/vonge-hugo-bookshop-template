@@ -16,9 +16,9 @@
   },
   "homepage": "https://github.com/CloudCannon/hugo-bookshop-starter#readme",
   "devDependencies": {
-    "@bookshop/browser": "2.4.2",
-    "@bookshop/generate": "2.4.2",
-    "@bookshop/hugo-engine": "2.4.2",
+    "@bookshop/browser": "3.0.0",
+    "@bookshop/generate": "3.0.0",
+    "@bookshop/hugo-engine": "3.0.0",
     "liquidjs": "9.28.0"
   },
   "dependencies": {
