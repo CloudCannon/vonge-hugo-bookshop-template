@@ -1,0 +1,8 @@
+[module]
+replacements = "components.local -> ../component-library"
+
+[[module.imports]]
+path = 'components.local'
+
+[[module.imports]]
+path = 'github.com/cloudcannon/bookshop/hugo/v3'
