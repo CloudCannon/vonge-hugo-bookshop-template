@@ -76,8 +76,6 @@
     background: linear-gradient(90deg, $primary-color 0%, $secondary-color 167%);
 
     &:hover {
-      color: $white;
-
       &:before {
         opacity: 1;
       }
