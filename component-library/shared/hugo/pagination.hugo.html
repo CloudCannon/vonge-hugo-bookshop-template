@@ -4,9 +4,10 @@
       <div class="pagination__inner">
   
         <div class="pagination__list">
-          {{ $prev_text := printf "%s" "output"}}
-          <i class="ion ion-ios-arrow-back"></i> Prev
-          <a data-pagebreak-control="prev" href="." class="pagination__prev">{{ $prev_text }}</a>
+            
+          {{ $prev_text := printf "%s" "Prev" }}
+          
+          <a data-pagebreak-control="prev" href="." class="pagination__prev"><i class='ion ion-ios-arrow-back'></i> {{ $prev_text }}</a>
           <span data-pagebreak-control="!prev" class="pagination__prev disabled">{{ $prev_text }}</span>
   
           <div class="pagination__count">
@@ -14,10 +15,9 @@
             of <span data-pagebreak-label="total">1</span>
           </div>
   
-          {{ $next_text := printf "%s" "output"}}
-          Next <i class="ion ion-ios-arrow-forward"></i>
+          {{ $next_text := printf "%s" "Next"}}
 
-          <a data-pagebreak-control="next" href="." class="pagination__next">{{ $next_text }}</a>
+          <a data-pagebreak-control="next" href="." class="pagination__next">{{ $next_text }}<i class="ion ion-ios-arrow-forward"></i></a>
           <span data-pagebreak-control="!next" class="pagination__next disabled">{{ $next_text }}</span>
         </div>
   
