@@ -7,3 +7,4 @@
 npm i
 # echo "🌥️  Running Bookshop generator…"
 npx "@bookshop/generate"
+hugo && npx @pagebreak/cli -s public -o public
