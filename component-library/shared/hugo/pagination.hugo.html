@@ -6,7 +6,6 @@
         <div class="pagination__list">
           {{ $prev_text := printf "%s" "output"}}
           <i class="ion ion-ios-arrow-back"></i> Prev
-          {{/*  {{ end }}  */}}
           <a data-pagebreak-control="prev" href="." class="pagination__prev">{{ $prev_text }}</a>
           <span data-pagebreak-control="!prev" class="pagination__prev disabled">{{ $prev_text }}</span>
   
@@ -17,7 +16,6 @@
   
           {{ $next_text := printf "%s" "output"}}
           Next <i class="ion ion-ios-arrow-forward"></i>
-          {{/*  {{ end }}  */}}
 
           <a data-pagebreak-control="next" href="." class="pagination__next">{{ $next_text }}</a>
           <span data-pagebreak-control="!next" class="pagination__next disabled">{{ $next_text }}</span>
