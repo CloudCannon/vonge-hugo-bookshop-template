@@ -16,9 +16,8 @@ collections_config:
     schemas:
       page:
         path: schemas/pages.md
-    # filter:
-    #   exclude:
-    #     - components.md
+    filter:
+      base: strict
   projects:
     output: true
     _enabled_editors:
@@ -36,9 +35,7 @@ collections_config:
       icon: 'format_quote'
       image: image
       subtext: position
-    filter:
-      exclude:
-        - _index.md
+    
     _icon: 'format_quote'
     _enabled_editors:
       - data
@@ -52,6 +49,9 @@ collections_config:
     schemas:
       default:
         path: schemas/posts.md
+    filter:
+      exclude:
+        - _index.md
 
 
 # Control which collections are displayed in the CloudCannon site navigation,
