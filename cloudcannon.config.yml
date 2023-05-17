@@ -15,7 +15,7 @@ collections_config:
       - visual
     schemas:
       page:
-        path: schemas/page.md
+        path: schemas/pages.md
   projects:
     output: true
     _enabled_editors:
