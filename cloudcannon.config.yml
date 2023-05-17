@@ -18,8 +18,6 @@ collections_config:
     icon: cases
 
   testimonials:
-    _enabled_editors:
-        - visual
     icon: format_quote
 
   posts:
