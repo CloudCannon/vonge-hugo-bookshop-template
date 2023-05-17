@@ -29,7 +29,10 @@ collections_config:
     #     path: content/projects/_default.md
   testimonials:
     output: false
-    image_key: image
+    preview_option:
+      - key: image
+    preview:
+      - icon: 'format_quote'
     _icon: 'format_quote'
     _enabled_editors:
       - data
