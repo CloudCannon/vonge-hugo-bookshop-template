@@ -25,7 +25,8 @@ collections_config:
       default:
         path: schemas/projects.md
   testimonials:
-    outpu: false
+    output: false
+    image_key: image
     _icon: 'format_quote'
     _enabled_editors:
       - data
