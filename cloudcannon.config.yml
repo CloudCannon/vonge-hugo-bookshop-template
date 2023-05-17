@@ -10,20 +10,23 @@ collections_config:
     filter: strict
     parse_branch_index: true
     path: content
-    icon: 'wysiwyg'
+    _icon: 'wysiwyg'
     _enabled_editors:
       - visual
   projects:
+    output: true
     _enabled_editors:
       - visual
-    icon: 'work_outline'
+    _icon: 'work_outline'
 
   testimonials:
-    icon: 'format_quote'
+    outpu: false
+    _icon: 'format_quote'
     _enabled_editors:
       - data
 
   posts:
+    output: true
     _enabled_editors:
       - visual
 
