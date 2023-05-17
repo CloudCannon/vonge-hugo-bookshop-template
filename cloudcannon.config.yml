@@ -16,6 +16,7 @@ collections_config:
       page:
         path: schemas/pages.md
     filter:
+      base: strict
       exclude:
         - components.md
   projects:
@@ -33,8 +34,8 @@ collections_config:
     output: false
     preview:
       icon: 'format_quote'
-      image: image
-      subtext: position
+      image: 'image'
+      subtext: 'position'
     _icon: 'format_quote'
     _enabled_editors:
       - data
