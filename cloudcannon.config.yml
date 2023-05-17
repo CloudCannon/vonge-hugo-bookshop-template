@@ -16,6 +16,9 @@ collections_config:
     schemas:
       page:
         path: schemas/pages.md
+    filter:
+      exclude:
+        - components.md
   projects:
     output: true
     _enabled_editors:
@@ -23,7 +26,7 @@ collections_config:
     _icon: 'work_outline'
     schemas:
       default:
-        path: schemas/projects.md
+        path: content/projects/_default.md
   testimonials:
     output: false
     image_key: image
