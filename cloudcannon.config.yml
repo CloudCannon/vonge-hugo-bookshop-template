@@ -13,22 +13,32 @@ collections_config:
     _icon: 'wysiwyg'
     _enabled_editors:
       - visual
+    schemas:
+      page:
+        path: schemas/page.md
   projects:
     output: true
     _enabled_editors:
       - visual
     _icon: 'work_outline'
-
+    schemas:
+      page:
+        path: schemas/projects.md
   testimonials:
     outpu: false
     _icon: 'format_quote'
     _enabled_editors:
       - data
-
+    schemas:
+      page:
+        path: schemas/testimonials.md
   posts:
     output: true
     _enabled_editors:
       - visual
+    schemas:
+      page:
+        path: schemas/posts.md
 
 
 # Control which collections are displayed in the CloudCannon site navigation,
