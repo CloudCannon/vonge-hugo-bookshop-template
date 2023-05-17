@@ -7,7 +7,7 @@
 collections_config:
   pages:
     output: true
-    parse_branch_index: true
+    # parse_branch_index: true
     path: content
     _icon: 'wysiwyg'
     _enabled_editors:
@@ -34,7 +34,6 @@ collections_config:
       icon: 'format_quote'
       image: image
       subtext: position
-    
     _icon: 'format_quote'
     _enabled_editors:
       - data
