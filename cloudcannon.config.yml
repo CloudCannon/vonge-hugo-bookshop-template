@@ -15,10 +15,12 @@ collections_config:
   projects:
     _enabled_editors:
         - visual
+    icon: cases
 
   testimonials:
     _enabled_editors:
         - visual
+    icon: format_quote
 
   posts:
     _enabled_editors:
