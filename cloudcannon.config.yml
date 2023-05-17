@@ -16,9 +16,6 @@ collections_config:
     schemas:
       page:
         path: schemas/pages.md
-    filter:
-      exclude:
-        - components.md
   projects:
     output: true
     _enabled_editors:
