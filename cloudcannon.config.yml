@@ -8,7 +8,7 @@ collections_config:
   pages:
     output: true
     parse_branch_index: true
-    path: content
+    # path: content
     _icon: 'wysiwyg'
     _enabled_editors:
       - visual
@@ -55,11 +55,11 @@ collections_config:
 # Control which collections are displayed in the CloudCannon site navigation,
 # and how those collections are grouped.
 collection_groups:
-  # - heading: Content
-  #   collections:
-  #     - pages
-  #     - projects
-  #     - testimonials
+  - heading: Content
+    collections:
+      - pages
+      - projects
+      - testimonials
   - heading: Blogging
     collections:
       - posts
