@@ -10,15 +10,16 @@ collections_config:
     filter: strict
     parse_branch_index: true
     path: content
+    icon: 'wysiwyg'
     _enabled_editors:
       - visual
   projects:
     _enabled_editors:
       - visual
-    icon: cases
+    icon: 'work_outline'
 
   testimonials:
-    icon: format_quote
+    icon: 'format_quote'
     _enabled_editors:
       - data
 
@@ -39,7 +40,7 @@ collection_groups:
     collections:
       - posts
       - drafts
-  - heading: Data
+  - heading: Settings
       - data
 
 # Set this to true to disable auto-detection of collections.
