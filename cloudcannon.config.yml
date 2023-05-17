@@ -19,6 +19,9 @@ collections_config:
 
   testimonials:
     icon: format_quote
+    gallery:
+      image:
+        - key: image
 
   posts:
     _enabled_editors:
