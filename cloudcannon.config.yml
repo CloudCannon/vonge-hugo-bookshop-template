@@ -22,7 +22,7 @@ collections_config:
       - visual
     _icon: 'work_outline'
     schemas:
-      page:
+      default:
         path: schemas/projects.md
   testimonials:
     outpu: false
@@ -30,14 +30,14 @@ collections_config:
     _enabled_editors:
       - data
     schemas:
-      page:
+      default:
         path: schemas/testimonials.md
   posts:
     output: true
     _enabled_editors:
       - visual
     schemas:
-      page:
+      default:
         path: schemas/posts.md
 
 
