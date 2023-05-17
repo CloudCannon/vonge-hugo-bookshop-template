@@ -36,6 +36,9 @@ collections_config:
       icon: 'format_quote'
       image: image
       subtext: position
+    filter:
+      exclude:
+        - _index.md
     _icon: 'format_quote'
     _enabled_editors:
       - data
