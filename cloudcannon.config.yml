@@ -14,17 +14,17 @@ collections_config:
       - visual
   projects:
     _enabled_editors:
-        - visual
+      - visual
     icon: cases
 
   testimonials:
     icon: format_quote
     _enabled_editors:
-        - data
+      - data
 
   posts:
     _enabled_editors:
-        - visual
+      - visual
 
 
 # Control which collections are displayed in the CloudCannon site navigation,
