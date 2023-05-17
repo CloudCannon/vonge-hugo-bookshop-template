@@ -19,9 +19,8 @@ collections_config:
 
   testimonials:
     icon: format_quote
-    gallery:
-      image:
-        - key: image
+    _enabled_editors:
+        - data
 
   posts:
     _enabled_editors:
@@ -40,6 +39,8 @@ collection_groups:
     collections:
       - posts
       - drafts
+  - heading: Data
+      - data
 
 # Set this to true to disable auto-detection of collections.
 collections_config_override: false
