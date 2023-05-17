@@ -24,9 +24,12 @@ collections_config:
     _enabled_editors:
       - visual
     _icon: 'work_outline'
-    # schemas:
-    #   default:
-    #     path: content/projects/_default.md
+    schemas:
+      default:
+        path: schemas/projects.md
+    filter:
+      exclude:
+        - _index.md
   testimonials:
     output: false
     preview:
