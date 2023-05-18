@@ -35,7 +35,7 @@ collections_config:
     preview:
       icon: 'format_quote'
       image: 
-        - key: 'image'
+        - key: static/'image'
       subtext: 
         - key: 'position'
     _icon: 'format_quote'
