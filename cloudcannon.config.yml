@@ -34,8 +34,8 @@ collections_config:
     output: false
     preview:
       icon: 'format_quote'
-      image: 
-        - key: static/'image'
+      gallery: 
+        - key: 'image'
       subtext: 
         - key: 'position'
     _icon: 'format_quote'
