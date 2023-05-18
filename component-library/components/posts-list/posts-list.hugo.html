@@ -3,10 +3,46 @@
 <p>Hello live edit</p>
 <div class="container animate">
   <div class="row" data-pagebreak="6">
-    {{ range where site.RegularPages "Section" "posts" }}
-      {{ partial "bookshop" (slice "blog-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title
-      "description" .Params.description "Summary" .Summary "date" .Date "tags" .Params.tags)) }}
+    {{ $c := "c-blog-card" }}
+<div class="{{$c}} col col-4 col-d-6 col-t-12">
+  <div class="{{$c}}__inner">
+
+    {{ if .image }}
+    <div class="{{$c}}__image-wrap">
+      <a class="{{$c}}__image" href="/">
+        <img loading="lazy" src="/images/post-6.jpg" alt="title">
+      </a>
+    </div>
     {{ end }}
+
+    <div class="{{$c}}__content">
+
+      <div class="{{$c}}__tags-box">
+          <a href="/" class="{{$c}}__tag">tag</a>
+      </div>
+
+      <h2 class="{{$c}}__title">
+        <a href="/">Post Title</a>
+      </h2>
+
+      <p class="{{$c}}__excerpt">
+          Description or shorrt summary appears here.
+      </p>
+
+      <div class="{{$c}}__meta">
+        <div class="{{$c}}__author-image">
+          <img loading="lazy" src="/images/page-1.jpg" alt="Author Name">
+        </div>
+        <div class="{{$c}}__info">
+          <div class="{{$c}}__author-name">Author Name</div>
+          <span class="{{$c}}__date"><time datetime="1/1/23">{{ .date.Format "02 Jan 2006"
+          }}</time></span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
   </div>
 </div>
 {{ partial "bookshop_partial" (slice "pagination" . ) }}
