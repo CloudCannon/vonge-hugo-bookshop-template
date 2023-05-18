@@ -43,6 +43,4 @@ content_blocks:
     form_description: Vonge comes with a built-in contact form.
     form_submission_email: site@example.com
     form_button_text: Send now
-  - _bookshop_name: content
-    content_html: <p>fdgdfgdfgdf</p>
 ---
