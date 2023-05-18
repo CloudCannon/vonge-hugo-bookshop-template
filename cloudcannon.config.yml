@@ -34,8 +34,10 @@ collections_config:
     output: false
     preview:
       icon: 'format_quote'
-      image: 'image'
-      subtext: 'position'
+      image: 
+        - key: 'image'
+      subtext: 
+        - key: 'position'
     _icon: 'format_quote'
     _enabled_editors:
       - data
