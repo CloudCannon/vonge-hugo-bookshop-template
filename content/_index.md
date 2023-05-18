@@ -1,8 +1,5 @@
 ---
 content_blocks:
-  # An example of using bookshop via array structures.
-  # On CloudCannon, these structures are configured automatically for you.
-  # To follow this array being rendered, see layouts/_default/baseof.html
   - _bookshop_name: hero
     title: Hi there, I am Vanessa Marley
     description_html: >-
@@ -13,9 +10,9 @@ content_blocks:
     image: /images/01.jpg
     image_alt: Vanessa Marley's picture
     cta_button: Get in touch
-    cta_button_link: "#contact"
+    cta_button_link: '#contact'
     works_button: See my works
-    works_button_link: "#projects"
+    works_button_link: '#projects'
   - _bookshop_name: projects-section
     title: Latest Works
     description_html: >-
@@ -46,4 +43,6 @@ content_blocks:
     form_description: Vonge comes with a built-in contact form.
     form_submission_email: site@example.com
     form_button_text: Send now
+  - _bookshop_name: content
+    content_html: <p>fdgdfgdfgdf</p>
 ---
