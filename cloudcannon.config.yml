@@ -37,6 +37,7 @@ collections_config:
       gallery: 
         image:
           - key: 'image'
+        fit: contain
       subtext: 
         - key: 'position'
     _icon: 'format_quote'
