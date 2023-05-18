@@ -27,9 +27,9 @@ collections_config:
     schemas:
       default:
         path: schemas/projects.md
-    filter:
-      exclude:
-        - _index.md
+    # filter:
+    #   exclude:
+    #     - _index.md
   testimonials:
     output: false
     preview:
@@ -53,9 +53,9 @@ collections_config:
     schemas:
       default:
         path: schemas/posts.md
-    filter:
-      exclude:
-        - _index.md
+    # filter:
+    #   exclude:
+    #     - _index.md
 
 
 # Control which collections are displayed in the CloudCannon site navigation,
