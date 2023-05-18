@@ -3,13 +3,12 @@
 <p>Hello live edit</p>
 <div class="container animate">
   <div class="row" data-pagebreak="6">
-    {{ range .RegularPages "Section" "posts" }}
+    {{ range where site.RegularPages "Section" "posts" }}
       {{ partial "bookshop" (slice "blog-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title
       "description" .Params.description "Summary" .Summary "date" .Date "tags" .Params.tags)) }}
     {{ end }}
   </div>
 </div>
-{{ partial "bookshop_partial" (slice "pagination" . ) }}
 
 {{ else }}
 
