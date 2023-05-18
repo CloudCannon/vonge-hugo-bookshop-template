@@ -2,9 +2,52 @@
 
 <div class="container animate">
   <div class="row" data-pagebreak="6">
-    {{ range where site.RegularPages "Section" "posts" }}
-      {{ partial "bookshop" (slice "blog-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title
-      "description" .Params.description "Summary" .Summary "date" .Date "tags" .Params.tags)) }}
+    {{ $c := "c-blog-card" }}
+    <div class="{{$c}} col col-4 col-d-6 col-t-12">
+      <div class="{{$c}}__inner">
+    
+        {{ if .image }}
+        <div class="{{$c}}__image-wrap">
+          <a class="{{$c}}__image" href="{{ .url }}">
+            <img loading="lazy" src="{{ .image }}" alt="{{ .title }}">
+          </a>
+        </div>
+        {{ end }}
+    
+        <div class="{{$c}}__content">
+    
+          <div class="{{$c}}__tags-box">
+            {{ range .tags }}
+              <a href="/tags/{{ . }}" class="{{$c}}__tag">{{ . }}</a>
+            {{ end }}
+          </div>
+    
+          <h2 class="{{$c}}__title">
+            <a href="{{ .url }}">{{ .title }}</a>
+          </h2>
+    
+          <p class="{{$c}}__excerpt">
+            {{ if .description }}
+              {{ .description }}
+            {{ else }}
+              {{ truncate 120 .Summary | safeHTML }}
+            {{ end }}
+          </p>
+    
+          <div class="{{$c}}__meta">
+            <div class="{{$c}}__author-image">
+              <img loading="lazy" src="{{ site.Data.author.author_image }}" alt="{{ site.Data.author.author_name }}">
+            </div>
+            <div class="{{$c}}__info">
+              <div class="{{$c}}__author-name">{{ site.Data.author.author_name }}</div>
+              <span class="{{$c}}__date"><time datetime="{{ .date }}">{{ .date.Format "02 Jan 2006"
+              }}</time></span>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </div>
     {{ end }}
   </div>
 </div>
