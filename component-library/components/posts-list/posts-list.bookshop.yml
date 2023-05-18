@@ -11,7 +11,6 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   show_posts: true
-  _live_render: false
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview: {}
