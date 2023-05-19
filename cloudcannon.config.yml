@@ -19,6 +19,8 @@ collections_config:
       base: strict
       exclude:
         - components.md
+        - posts
+        - projects
   projects:
     output: true
     _enabled_editors:
