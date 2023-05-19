@@ -1,13 +1,13 @@
 # Vonge
 
-Vonge is a Personal portfolio/blog site template for Jekyll. Browse through a [live demo](https://jazzed-kale.cloudvent.net/).
+Vonge is a Personal portfolio/blog site template for Hugo. Browse through a [live demo](https://jazzed-kale.cloudvent.net/).
 Increase the web presence of your brand with this configurable theme.
 
 
 Vonge was made by [CloudCannon](http://cloudcannon.com/), the JAMStack Cloud CMS.
 The component library is built and maintained for use with [Bookshop](https://github.com/cloudcannon/bookshop/)
 
-Find more templates, themes and step-by-step Jekyll tutorials at [CloudCannon Community](https://cloudcannon.com/community/).
+Find more templates, themes and step-by-step Hugo tutorials at [CloudCannon Tutorials](http://cloudcannon.com/tutorials/).
 
 ## Features
 
