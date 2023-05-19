@@ -5,5 +5,5 @@ title: test
 description: test description
 tags:
 image:
-draft: true
+draft: false
 ---
