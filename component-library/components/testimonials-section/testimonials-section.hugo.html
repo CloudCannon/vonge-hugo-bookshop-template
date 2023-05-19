@@ -1,3 +1,53 @@
+{{ if site.Params.env_bookshop_live }}
+
+
+<section class="section testimonials animate">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <div class="section__info">
+          <div class="section__head">
+            <h2 class="section__title">{{ .title }}</h2>
+            <ul class="controls list-reset" id="customize-controls" aria-label="Slider Navigation" tabindex="0">
+              <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+                <i class="ion ion-ios-arrow-back"></i>
+              </li>
+              <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
+                <i class="ion ion-ios-arrow-forward"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="section__description">{{ .description_html | safeHTML }}</div>
+        </div>
+
+        <div class="testimonials__slider my-slider">
+          {{ range seq 3 }}
+          {{ $c := "c-testimonial-card" }}
+            <div class="{{$c}}">
+              <div class="{{$c}}__content">
+                <div class="{{$c}}__client-meta">
+                    <div class="{{$c}}__image-container">
+                      <img class="{{$c}}__client-avatar" src="/images/client-1.jpg" alt="Client name">
+                    </div>
+                  <div class="{{$c}}__client-info">
+                      <h3 class="{{$c}}__client-name">Client name</h3>
+                      <p class="{{$c}}__client-position">Copywriter</p>
+                  </div>
+                </div>
+                  <p class="{{$c}}__client-text">This is an example of what this section will look like on you sight. Go to the testimonials to edit the contents of these cards.</p>
+              </div>
+            </div>
+            {{ end }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{{ else }}
 <!-- begin testimonials -->
 <section class="section testimonials animate">
   <div class="container">
@@ -31,4 +81,5 @@
     </div>
   </div>
 </section>
+{{ end }}
 <!-- end testimonials -->
