@@ -8,10 +8,10 @@ collections_config:
   pages:
     output: true
     parse_branch_index: true
-    # path: content
     _icon: 'wysiwyg'
     _enabled_editors:
       - visual
+      - content
     schemas:
       page:
         path: schemas/pages.md
@@ -25,6 +25,7 @@ collections_config:
     output: true
     _enabled_editors:
       - visual
+      - content
     _icon: 'work_outline'
     schemas:
       default:
@@ -49,11 +50,10 @@ collections_config:
     output: true
     _enabled_editors:
       - visual
+      - content
     schemas:
       default:
         path: schemas/posts.md
-  data:
-    path: data
 
 
 
@@ -70,13 +70,14 @@ collection_groups:
       - posts
       - drafts
   - heading: Settings
+    collections:
       - data
 
 # Set this to true to disable auto-detection of collections.
 collections_config_override: false
 
 # Control which data sets are available to populate select and multiselect inputs.
-data_config: true
+data_config:
 
 # Base path to your source files, relative to the root folder of your repository.
 source:
