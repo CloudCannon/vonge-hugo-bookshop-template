@@ -24,8 +24,8 @@ collections_config:
   projects:
     output: true
     _enabled_editors:
-      - visual
       - content
+      - visual
     _icon: 'work_outline'
     schemas:
       default:
@@ -49,8 +49,8 @@ collections_config:
   posts:
     output: true
     _enabled_editors:
-      - visual
       - content
+      - visual
     schemas:
       default:
         path: schemas/posts.md
