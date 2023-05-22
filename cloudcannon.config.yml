@@ -102,8 +102,3 @@ timezone: Etc/UTC
 _structure:
   example:
   style: modal
-    - label:
-      value:
-      name:
-      description:
-      image:
