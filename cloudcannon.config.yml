@@ -99,6 +99,6 @@ source_editor:
 # within the CloudCannon Data Editor.
 timezone: Etc/UTC
 
-_structure:
+_array_structure:
   content_blocks:
     style: modal
