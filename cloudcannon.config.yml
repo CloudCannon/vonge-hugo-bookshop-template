@@ -100,5 +100,5 @@ source_editor:
 timezone: Etc/UTC
 
 _structure:
-  example:
+  content_blocks:
   style: modal
