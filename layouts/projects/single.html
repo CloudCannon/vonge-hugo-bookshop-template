@@ -4,7 +4,7 @@
 
 <div class="container">
 
-  {{ partial "bookshop" (slice "page-heading" (dict "title" .Params.title "description" .Params.subtitle)) }}
+  {{ partial "bookshop" (slice "page-heading" (dict "title" .Params.title "description" .Params.subtitle "tags" .Params.tags)) }}
 
   {{ partial "bookshop" (slice "page-image" (dict "image" .Params.image "image_alt" .Params.title)) }}
 

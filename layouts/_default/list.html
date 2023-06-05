@@ -4,13 +4,37 @@
 
 {{ partial "bookshop" (slice "page-heading" (dict "title" .Params.title)) }}
 
+
 <div class="container">
+  <h1>Posts</h1>
   <div class="row">
     <div class="col col-12">
       <div class="contaniner__inner animate">
         <div class="row">
-          {{ range .Data.Pages }}
-            {{ partial "bookshop" (slice "blog-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title "description" .Params.description "Summary" .Summary "date" .Date "tags" .Params.tags)) }}
+          
+          {{ range .Pages }}
+            {{ if in .Params.category "Post" }}
+              {{ partial "bookshop" (slice "blog-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title "description" .Params.description "Summary" .Summary "date" .Date "tags" .Params.tags)) }}
+            {{ end }}
+            {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Projects</h1>
+  <div class="row">
+    <div class="col col-12">
+      <div class="contaniner__inner animate">
+        <div class="row">
+            
+            {{ range .Pages }}
+            {{ if in .Params.category "Project" }}
+              {{ partial "bookshop" (slice "project-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title
+          "subtitle" .Params.subtitle )) }}
+          {{ end }}
           {{ end }}
         </div>
       </div>

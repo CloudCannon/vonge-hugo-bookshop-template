@@ -2,6 +2,8 @@
 date: 2021-01-02 08:20:35 +0300
 title: Desk setup
 subtitle: Photography
+category: ['Project']
+tags:   [photography, life, home, project]
 image: '/images/project-1.jpg'
 ---
 

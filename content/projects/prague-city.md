@@ -2,6 +2,8 @@
 date: 2021-01-03 08:00:35 +0300
 title: Prague city
 subtitle: Photography
+category: ['Project']
+tags:   [travel, prague, photography, architecture, project]
 image: '/images/project-2.jpg'
 ---
 
