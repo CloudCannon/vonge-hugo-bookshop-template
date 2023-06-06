@@ -4,7 +4,7 @@ title: Strive not to be a success, but rather to be of value
 description: >-
   Bring to the table win-win survival strategies to ensure proactive domination.
   At the end of the day, going forward.
-category: ['Post']
+categories: [Post]
 tags:
   - life
   - notes

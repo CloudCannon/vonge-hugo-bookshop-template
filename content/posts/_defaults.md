@@ -3,7 +3,7 @@ date:
 draft: true
 title:
 description:
-category:
+categories:
 tags:
 image:
 ---

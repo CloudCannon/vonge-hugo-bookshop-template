@@ -4,7 +4,7 @@ title: Do what you can, with what you have, where you are
 description: >-
   Bring to the table win-win survival strategies to ensure proactive domination.
   At the end of the day, going forward.
-category: ['Post']
+categories: [Post]
 tags:
   - life
   - story

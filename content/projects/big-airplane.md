@@ -2,7 +2,7 @@
 date: 2021-01-06 07:30:35 +0300
 title: Big airplane
 subtitle: Photography
-category: ['Project']
+categories: ['Project']
 tags:   [travel, photography, nature, project]
 image: '/images/project-5.jpg'
 ---

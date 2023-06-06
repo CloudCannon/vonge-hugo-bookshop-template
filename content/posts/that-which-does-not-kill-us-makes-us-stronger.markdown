@@ -5,7 +5,7 @@ title: That which does not kill us makes us stronger
 description: >-
   Bring to the table win-win survival strategies to ensure proactive domination.
   At the end of the day, going forward.
-category: ['Post']
+categories: [Post]
 tags:
   - travel
   - lifestyle

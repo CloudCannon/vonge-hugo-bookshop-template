@@ -2,7 +2,7 @@
 date: 2021-01-10 05:20:35 +0300
 title: Green Plant
 subtitle: Photography
-category: ['Project']
+categories: ['Project']
 tags:   [ project]
 image: '/images/project-9.jpg'
 ---
