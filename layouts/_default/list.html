@@ -13,7 +13,7 @@
         <div class="row">
           
           {{ range .Pages }}
-            {{ if in .Params.category "Post" }}
+            {{ if in .Params.categories "Post" }}
               {{ partial "bookshop" (slice "blog-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title "description" .Params.description "Summary" .Summary "date" .Date "tags" .Params.tags)) }}
             {{ end }}
             {{ end }}
@@ -31,7 +31,7 @@
         <div class="row">
             
             {{ range .Pages }}
-            {{ if in .Params.category "Project" }}
+            {{ if in .Params.categories "Project" }}
               {{ partial "bookshop" (slice "project-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title
           "subtitle" .Params.subtitle )) }}
           {{ end }}
