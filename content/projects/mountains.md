@@ -2,7 +2,6 @@
 date: 2021-01-05 07:40:35 +0300
 title: Mountains
 subtitle: Photography
-categories: ['Project']
 tags:   [travel, photography, nature, project]
 image: '/images/project-4.jpg'
 ---

@@ -1,7 +1,6 @@
 ---
 title:  The way I see it, every life is a pile of good things
 date:   2018-10-31 15:01:35 +0300
-categories: [Post]
 image:  '/images/post-7.jpg'
 tags:   [notes, story, rest]
 ---
