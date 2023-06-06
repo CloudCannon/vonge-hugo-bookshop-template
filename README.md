@@ -19,6 +19,7 @@ Find more templates, themes and step-by-step Hugo tutorials at [CloudCannon Tuto
 * Category pages
 * Testimonials
 * Portfolio
+* Portfolio tags
 * Live editing with [CloudCannon](http://cloudcannon.com/)
 * Optimised for editing in [CloudCannon](http://cloudcannon.com/)
 * Search engine optimisation
