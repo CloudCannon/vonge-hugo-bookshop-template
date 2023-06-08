@@ -3,6 +3,10 @@ languageCode = "en-us"
 title = "Hugo Bookshop Starter"
 _enabled_editors = ["visual", "content"]
 
+[taxonomies]
+category = 'categories'
+tag = 'tags'
+
 [module]
 replacements = "local/component-library -> ../component-library"
 

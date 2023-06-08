@@ -1,6 +1,13 @@
 {{ $c := "c-page-heading" }}
+
 <div class="container">
+  
   <div class="{{$c}}">
+    <div class="project-tags">
+      {{ range $index, $tag := .tags }}
+        <a href="{{ "/tags/" | relLangURL }}{{ . | urlize}}" class="project-tags__tag">{{ $tag }}</a>
+      {{ end }}
+    </div>
     <h1 class="{{$c}}__title">{{ humanize .title }}</h1>
     {{ if .description }}
       <p class="{{$c}}__description">{{ .description }}</p>
