@@ -3,7 +3,6 @@
 {{ if (eq .Section "tags") }}
 
 {{ partial "bookshop" (slice "page-heading" (dict "title" .Params.title)) }}
-{{ $title := .Params.title }}
 
 <div class="container">
   <h1>Posts</h1>
@@ -11,12 +10,8 @@
       <div class="col col-12">
         <div class="contaniner__inner animate">
           <div class="row">
-            {{ with .Site.GetPage "section" "posts"}}
-              {{ range .Pages }}
-                {{ if in .Params.tags $title }}
-                  {{ partial "bookshop" (slice "blog-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title "description" .Params.description "Summary" .Summary "date" .Date "tags" .Params.tags)) }}
-                {{ end }}
-              {{ end }}
+            {{ range where .Pages "Section" "posts"}}
+              {{ partial "bookshop" (slice "blog-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title "description" .Params.description "Summary" .Summary "date" .Date "tags" .Params.tags)) }}
             {{ end }}
           </div>
         </div>
@@ -27,13 +22,9 @@
       <div class="col col-12">
         <div class="contaniner__inner animate">
           <div class="row">
-            {{ with .Site.GetPage "section" "projects"}}
-              {{ range .Pages }}
-                {{ if in .Params.tags $title }}
-                  {{ partial "bookshop" (slice "project-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title
+            {{ range where .Pages "Section" "projects"}}
+              {{ partial "bookshop" (slice "project-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title
                 "subtitle" .Params.subtitle )) }}
-                {{ end }}
-              {{ end }}
             {{ end }}
           </div>
         </div>
