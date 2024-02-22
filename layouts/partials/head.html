@@ -3,18 +3,61 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ if not .IsHome }}{{ humanize .Title }} | {{ end }}{{ .Site.Data.general_settings.title }}</title>
-  <meta name="description" content="{{if .IsHome}}{{ .Site.Data.general_settings.description }}{{else}}{{ .Description }}{{end}}">
+
+<!-- Page description for SEO -->
+{{ if .Params.seo.page_description }}
+    <meta name="description" content="{{ .Params.seo.page_description }}">
+    <meta property="og:description" content="{{ .Params.seo.page_description }}" />
+{{ else }}
+    <meta name="description" content="{{if .IsHome}}{{ .Site.Data.general_settings.description }}{{else}}{{ .Description }}{{end}}">  
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Data.general_settings.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+{{ end }}
+
+<!-- Canonical URL for SEO -->
+{{ if .Params.seo.canonical_url }}
+    <link rel="canonical" href="{{ .Params.seo.canonical_url }}" />
+{{ else }}
+    <link rel="canonical" href="{{ site.Data.general_settings.BaseURL }}{{ .RelPermalink }}" />  
+{{ end }}
+
+<!-- Featured Image -->
+{{ if .Params.seo.featured_image }}
+<meta name="og:image" content="{{ .Params.seo.featured_image }}" />
+<meta name="twitter:image" content="{{ .Params.seo.featured_image }}" />
+{{ else }}
+
+{{ if .IsHome}}<meta property="og:image" content="{{ .Site.Data.general_settings.social_media_share_image | absURL }}">{{ else }}<meta property="og:image" content="{{ .Params.Image | absURL }}">{{ end }}
+{{ if .IsHome}}<meta name="twitter:image" content="{{ .Site.Data.general_settings.social_media_share_image | absURL }}">{{ else }}<meta name="twitter:image" content="{{ .Params.Image | absURL }}">{{ end }}
+{{ end }}
+
+<!-- Twiter Handle -->
+{{ with .Params.seo.author_twitter_handle }}  
+    <meta name="twitter:creator" content="{{ . }}" />
+    {{ else }}
+    <meta name="twitter:creator" content="{{ .Site.Data.general_settings.twitter_handle }}" />
+    {{ end }}
+
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Data.general_settings.title }}">
   <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ if .IsPage }}{{ .Summary }}{{ else }}{{ with .Site.Data.general_settings.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  {{ if .IsHome}}<meta name="twitter:image" content="{{ .Site.Data.general_settings.social_media_share_image | absURL }}">{{ else }}<meta name="twitter:image" content="{{ .Params.Image | absURL }}">{{ end }}
 
   <!-- Facebook OpenGraph -->
+  {{ with .Params.seo.open_graph_type }}
+    <meta property="og:type" content="{{ . }}" />
+    {{ else }}
+    <meta property="og:type" content="website" />
+    {{ end }}
+
+
   <meta property="og:title" content="{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ .Site.Data.general_settings.title }}">
-  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Data.general_settings.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-  {{ if .IsHome}}<meta property="og:image" content="{{ .Site.Data.general_settings.social_media_share_image | absURL }}">{{ else }}<meta property="og:image" content="{{ .Params.Image | absURL }}">{{ end }}
+
+    <!-- Add robots no index -->
+  {{ if .Params.seo.no_index }}
+  <meta name="robots" content="noindex">
+  <meta name="googlebot" content="noindex">
+  {{ end }}
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
