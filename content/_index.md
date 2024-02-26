@@ -1,10 +1,10 @@
 ---
 seo:
   page_description:
-  canonical_url: testtestteset
+  canonical_url:
   featured_image:
-  author_twitter_handle: author test
-  open_graph_type: coolio
+  author_twitter_handle:
+  open_graph_type:
   no_index: false
 content_blocks:
   - _bookshop_name: hero
