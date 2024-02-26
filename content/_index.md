@@ -1,7 +1,7 @@
 ---
 seo:
-  page_description: test page description
-  canonical_url:
+  page_description:
+  canonical_url: testtestteset
   featured_image:
   author_twitter_handle:
   open_graph_type:
