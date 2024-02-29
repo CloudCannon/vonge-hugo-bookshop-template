@@ -17,7 +17,7 @@
 {{ if .Params.seo.canonical_url }}
     <link rel="canonical" href="{{ .Params.seo.canonical_url }}" />
 {{ else }}
-    <link rel="canonical" href="{{ site.Data.general_settings.BaseURL }}{{ .RelPermalink }}" />  
+    <link rel="canonical" href="{{ site.Data.general_settings.BaseUrl }}{{ .RelPermalink }}" />  
 {{ end }}
 
 <!-- Featured Image -->
