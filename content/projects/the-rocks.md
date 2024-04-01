@@ -2,7 +2,7 @@
 date: 2021-01-07 07:20:35 +0300
 title: The rocks
 subtitle: Photography
-tags:   [travel, photography, nature, project]
+tags: [travel, photography, nature, project]
 image: '/images/project-6.jpg'
 ---
 
