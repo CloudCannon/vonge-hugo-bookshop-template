@@ -2,7 +2,7 @@
 date:
 title:
 subtitle:
-tag:
+tags:
 image:
 draft: true
 ---
