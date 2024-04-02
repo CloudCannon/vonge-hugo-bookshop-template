@@ -3,7 +3,6 @@ name:
 position:
 image:
 blurb:
-_hide_content: true
 seo:
   page_description: 
   canonical_url: 

@@ -1,7 +1,9 @@
 ---
 date: 2021-01-09 05:20:35 +0300
+draft: false
 title: Antelope Canyon
 subtitle: Photography
+tags: [travel, photography, nature, project]
 image: '/images/project-8.jpg'
 seo:
   page_description: 

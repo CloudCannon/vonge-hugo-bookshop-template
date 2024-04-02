@@ -5,18 +5,33 @@
 {{ partial "bookshop" (slice "page-heading" (dict "title" .Params.title)) }}
 
 <div class="container">
-  <div class="row">
-    <div class="col col-12">
-      <div class="contaniner__inner animate">
-        <div class="row">
-          {{ range .Data.Pages }}
-            {{ partial "bookshop" (slice "blog-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title "description" .Params.description "Summary" .Summary "date" .Date "tags" .Params.tags)) }}
-          {{ end }}
+  <h1>Posts</h1>
+    <div class="row">
+      <div class="col col-12">
+        <div class="contaniner__inner animate">
+          <div class="row">
+            {{ range where .Pages "Section" "posts"}}
+              {{ partial "bookshop" (slice "blog-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title "description" .Params.description "Summary" .Summary "date" .Date "tags" .Params.tags)) }}
+            {{ end }}
+          </div>
+        </div>
+      </div>
+  </div>
+  <h1>Projects</h1>
+    <div class="row">
+      <div class="col col-12">
+        <div class="contaniner__inner animate">
+          <div class="row">
+            {{ range where .Pages "Section" "projects"}}
+              {{ partial "bookshop" (slice "project-card" (dict "url" .RelPermalink "image" .Params.image "title" .Params.title
+                "subtitle" .Params.subtitle )) }}
+            {{ end }}
+          </div>
         </div>
       </div>
     </div>
-  </div>
 </div>
+
 
 {{ partial "bookshop" (slice "newsletter" (dict "newsletter_title" site.Data.newsletter.newsletter_title "newsletter_description" site.Data.newsletter.newsletter_description "newsletter_identifier" site.Data.newsletter.newsletter_identifier "newsletter_button" site.Data.newsletter.newsletter_button)) }}
 

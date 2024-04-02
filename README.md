@@ -29,7 +29,7 @@ Find more templates, themes and step-by-step Hugo tutorials at [CloudCannon Tuto
 
 To run locally:
 ```bash
-cd site && hugo server -D
+hugo serve
 ```
 
 To generate the component browser:
@@ -37,6 +37,11 @@ To generate the component browser:
 npm run bookshop-browser
 ```
 This will create browser files in the site's static directory. Running a Hugo build after this will show a live component browser at `/components` 
+
+If there is a bookshop error when running locally, try updating bookshop:
+```bash
+npx @bookshop/up@latest
+```
 
 ## Structure
 The bookshop components live in `component-library`, which is loaded as a Hugo module in `site/config.toml`.

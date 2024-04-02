@@ -1,7 +1,9 @@
 ---
 date: 2021-01-10 05:20:35 +0300
+draft: false
 title: Green Plant
 subtitle: Photography
+tags: [project]
 image: '/images/project-9.jpg'
 seo:
   page_description: 
