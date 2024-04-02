@@ -1,5 +1,6 @@
 ---
 date: 2021-01-08 06:20:35 +0300
+draft: false
 title: Quiet Lake
 subtitle: Photography
 tags: [travel, photography, nature, project]

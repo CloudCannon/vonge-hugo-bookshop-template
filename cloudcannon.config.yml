@@ -68,7 +68,6 @@ collection_groups:
   - heading: Blogging
     collections:
       - posts
-      - drafts
   - heading: Settings
     collections:
       - data
@@ -99,6 +98,8 @@ source_editor:
 # inputs
 
 _inputs:
+  draft:
+    comment: If checked, this page will remain hidden
   twitter_handle:
     type: twitter
 
