@@ -99,7 +99,7 @@ source_editor:
 
 _inputs:
   draft:
-    comment: If checked, this page will remain hidden
+    comment: If checked, this page will remain hidden on the live site
   twitter_handle:
     type: twitter
 
