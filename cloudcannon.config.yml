@@ -95,6 +95,13 @@ paths:
 # Lets you control the look and behaviour of the Source Editor.
 source_editor:
 
+
+# inputs
+
+_inputs:
+  twitter_handle:
+    type: twitter
+
 # Timezone of your site in IANA format. This is used by date and datetime inputs
 # within the CloudCannon Data Editor.
 timezone: Etc/UTC

@@ -4,6 +4,13 @@ title: Quiet Lake
 subtitle: Photography
 tags: [travel, photography, nature, project]
 image: '/images/project-7.jpg'
+seo:
+  page_description: 
+  canonical_url: 
+  featured_image: 
+  author_twitter_handle: 
+  open_graph_type:
+  no_index: false
 ---
 In qua quid est boni praeter summam voluptatem, et eam sempiternam? Cur post Tarentum ad Archytam? Qua ex cognitione facilior facta est investigatio rerum occultissimarum. Negat enim tenuissimo victu, id est contemptissimis escis et potionibus, minorem voluptatem.
 

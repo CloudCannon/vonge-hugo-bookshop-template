@@ -9,6 +9,7 @@ The component library is built and maintained for use with [Bookshop](https://gi
 
 Find more templates, themes and step-by-step Hugo tutorials at [CloudCannon Tutorials](http://cloudcannon.com/tutorials/).
 
+[![Deploy to CloudCannon](https://buttons.cloudcannon.com/deploy.svg)](https://app.cloudcannon.com/register#sites/connect/github/CloudCannon/vonge-hugo-bookshop-template)
 ## Features
 
 * Component library for website building
@@ -19,6 +20,7 @@ Find more templates, themes and step-by-step Hugo tutorials at [CloudCannon Tuto
 * Category pages
 * Testimonials
 * Portfolio
+* Portfolio tags
 * Live editing with [CloudCannon](http://cloudcannon.com/)
 * Optimised for editing in [CloudCannon](http://cloudcannon.com/)
 * Search engine optimisation
