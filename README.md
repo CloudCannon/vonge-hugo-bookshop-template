@@ -27,7 +27,7 @@ Find more templates, themes and step-by-step Hugo tutorials at [CloudCannon Tuto
 
 To run locally:
 ```bash
-cd site && hugo server -D
+hugo serve
 ```
 
 To generate the component browser:
