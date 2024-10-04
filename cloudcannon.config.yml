@@ -6,9 +6,12 @@
 # CloudCannon configuration specific to those collections.
 collections_config:
   pages:
-    output: true
-    parse_branch_index: true
-    _icon: 'wysiwyg'
+    path: content
+    glob:
+      - '!components.md'
+      - '!posts/_index.md'
+      - '!projects/_index.md'
+    icon: 'wysiwyg'
     _enabled_editors:
       - visual
       - content
@@ -17,21 +20,19 @@ collections_config:
         path: schemas/pages.md
     filter:
       base: strict
-      exclude:
-        - components.md
-        - posts/_index.md
-        - projects/_index.md
   projects:
-    output: true
+    path: content/projects
     _enabled_editors:
       - content
       - visual
-    _icon: 'work_outline'
+    icon: work_outline
     schemas:
       default:
         path: schemas/projects.md
   testimonials:
-    output: false
+    path: content/testimonials
+    icon: format_quote
+    disable_url: true
     preview:
       icon: 'format_quote'
       gallery: 
@@ -40,20 +41,23 @@ collections_config:
         fit: contain
       subtext: 
         - key: 'position'
-    _icon: 'format_quote'
     _enabled_editors:
       - data
     schemas:
       default:
         path: schemas/testimonials.md
   posts:
-    output: true
+    path: content/posts
+    icon: event_available
     _enabled_editors:
       - content
       - visual
     schemas:
       default:
         path: schemas/posts.md
+  data:
+    path: data
+    disable_url: true
 
 
 
@@ -84,16 +88,14 @@ source:
 # The locations of various types of files within your site.
 # Each path is relative to your site's source folder.
 paths:
-  data: data
-  collections: content
-  includes: layouts
-  layouts: layouts
   static: static
   uploads: static/uploads
 
 # Lets you control the look and behaviour of the Source Editor.
 source_editor:
 
+_snippets_imports:
+  hugo: true
 
 # inputs
 

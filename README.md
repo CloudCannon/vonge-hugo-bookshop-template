@@ -1,6 +1,6 @@
 # Vonge
 
-Vonge is a Personal portfolio/blog site template for Hugo. Browse through a [live demo](https://jazzed-kale.cloudvent.net/).
+Vonge is a Personal portfolio/blog site template for Hugo. Browse through a [live demo](https://joyous-penguin.cloudvent.net/).
 Increase the web presence of your brand with this configurable theme.
 
 

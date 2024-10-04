@@ -3,7 +3,8 @@
   "private": true,
   "description": "A starter template for Hugo with Bookshop",
   "scripts": {
-    "bookshop-browser": "bookshop-browser -b component-library -o bookshop-starter-site/static/bookshop-hosted.js"
+    "bookshop-browser": "bookshop-browser -b component-library -o bookshop-starter-site/static/bookshop-hosted.js",
+    "build": "hugo --source ./ --destination public --baseURL /"
   },
   "repository": {
     "type": "git",
