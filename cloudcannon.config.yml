@@ -93,6 +93,8 @@ paths:
 # Lets you control the look and behaviour of the Source Editor.
 source_editor:
 
+_snippets_imports:
+  hugo: true
 
 # inputs
 
