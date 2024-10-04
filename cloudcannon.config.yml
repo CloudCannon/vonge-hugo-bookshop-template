@@ -57,6 +57,7 @@ collections_config:
         path: schemas/posts.md
   data:
     path: data
+    disable_url: true
 
 
 
