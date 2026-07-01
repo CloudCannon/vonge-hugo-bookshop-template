@@ -18,8 +18,7 @@ collections_config:
     schemas:
       page:
         path: schemas/pages.md
-    filter:
-      base: strict
+    url: /[full_slug]/
   projects:
     path: content/projects
     _enabled_editors:
@@ -29,6 +28,7 @@ collections_config:
     schemas:
       default:
         path: schemas/projects.md
+    url: /projects/[full_slug]/
   testimonials:
     path: content/testimonials
     icon: format_quote
@@ -55,9 +55,13 @@ collections_config:
     schemas:
       default:
         path: schemas/posts.md
+    url: /posts/[full_slug]/
   data:
     path: data
     disable_url: true
+    disable_file_actions: true
+    disable_add_folder: true
+    disable_add: true
 
 
 
@@ -75,9 +79,6 @@ collection_groups:
   - heading: Settings
     collections:
       - data
-
-# Set this to true to disable auto-detection of collections.
-collections_config_override: false
 
 # Control which data sets are available to populate select and multiselect inputs.
 data_config:
