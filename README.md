@@ -27,16 +27,42 @@ Find more templates, themes and step-by-step Hugo tutorials at [CloudCannon Tuto
 
 ## Develop
 
-To run locally:
+### Requirements
+
+This template is built with **Hugo Extended v0.143.1** (see `hugoVersion` in `.cloudcannon/initial-site-settings.json`). It requires the **extended** edition of Hugo (for Sass compilation) and a minimum version of **v0.128.0** (declared in `component-library/config.toml`).
+
+Make sure you have installed:
+
+* [Hugo Extended](https://gohugo.io/installation/) — v0.143.1 recommended (minimum v0.128.0)
+* [Node.js](https://nodejs.org/) and npm (for Bookshop tooling)
+
+Check your Hugo version and confirm it's the extended edition:
+```bash
+hugo version
+```
+
+### Running locally
+
+Install the Node dependencies (Bookshop components are pulled in as Hugo modules, but the Bookshop tooling is installed via npm):
+```bash
+npm i
+```
+
+Then start the local development server:
 ```bash
 hugo serve
 ```
+The site will be available at `http://localhost:1313/`.
+
+### Component browser
 
 To generate the component browser:
 ```bash
 npm run bookshop-browser
 ```
-This will create browser files in the site's static directory. Running a Hugo build after this will show a live component browser at `/components` 
+This will create browser files in the site's static directory. Running a Hugo build after this will show a live component browser at `/components`.
+
+### Troubleshooting
 
 If there is a bookshop error when running locally, try updating bookshop:
 ```bash
