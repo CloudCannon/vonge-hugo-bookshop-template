@@ -24,7 +24,7 @@
   {{ $script := resources.Get "js/scripts.js" }}
   {{ $commonJs := resources.Get "js/common.js" }}
 
-  {{ if .Site.IsServer }}
+  {{ if hugo.IsServer }}
   <script src="{{ $script.Permalink }}"></script>
   <script src="{{ $commonJs.Permalink }}"></script>
   {{ else }}

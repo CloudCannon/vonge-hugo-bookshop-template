@@ -5,7 +5,7 @@
       "build_command": "npm run build",
       "output_path": "public",
       "preserved_paths": "node_modules/,.hugo_cache/,resources/",
-      "hugoVersion": "0.128.1",
+      "hugoVersion": "0.143.1",
       "environment_variables": [
         {
           "key": "HUGO_CACHEDIR",
